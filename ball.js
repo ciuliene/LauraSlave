@@ -30,5 +30,19 @@ class Ball {
 
     run() { }
 
-    isClicked() { }
+    isClicked() {
+        let score = 0;
+        if (this.destroyed || this.explosion) {
+            return 0;
+        }
+
+        let d = dist(mouseX, mouseY, this.pos.x, this.pos.y);
+        if (d < this.size / 2) {
+            score = parseInt(this.size);
+            this.size -= 10;
+            this.explosion = true;
+        }
+
+        return score;
+    }
 }
