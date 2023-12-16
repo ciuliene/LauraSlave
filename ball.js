@@ -9,7 +9,12 @@ class Ball {
         this.ballExplosionSize = 5;
     }
 
-    draw() { }
+    draw() {
+        if (!this.explosion) {
+            fill(this.color.r, this.color.g, this.color.b);
+            circle(this.pos.x, this.pos.y, this.size);
+        }
+    }
 
     run() { }
 
