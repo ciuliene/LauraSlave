@@ -13,6 +13,18 @@ class Ball {
         if (!this.explosion) {
             fill(this.color.r, this.color.g, this.color.b);
             circle(this.pos.x, this.pos.y, this.size);
+        } else {
+            for (let i = 0; i < 40; i++) {
+                let x = this.pos.x + this.size * cos(i);
+                let y = this.pos.y + this.size * sin(i);
+                fill(this.color.r, this.color.g, this.color.b);
+                circle(x, y, this.ballExplosionSize);
+            }
+            this.size += 2;
+            this.ballExplosionSize -= 0.2;
+            if (this.ballExplosionSize <= 0) {
+                this.destroyed = true;
+            }
         }
     }
 
