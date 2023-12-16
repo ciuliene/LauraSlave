@@ -28,7 +28,12 @@ class Ball {
         }
     }
 
-    run() { }
+    run() {
+        this.size -= this.decreaseSpeed;
+        if (this.size <= 0) {
+            this.destroyed = true;
+        }
+    }
 
     isClicked() {
         let score = 0;
