@@ -1,5 +1,7 @@
 # LauraSlave
 
+[Gioca!](https://ciuliene.github.io/LauraSlave/)
+
 ## Descrizione
 
 Esplodi le bolle che LauraSlave crea! Fai presto, hai solo 60 secondi!
