@@ -16,7 +16,7 @@ function startGame() {
 }
 
 function drawButton() {
-  button = createButton('INIZIA NUOVO GIOCO');
+  button = createButton('START NEW GAME');
   button.size(120, 45);
   button.position(30, 105);
   button.mousePressed(startGame);
